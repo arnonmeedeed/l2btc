@@ -1,21 +1,6 @@
-from pyln.client import LightningRpc
-
-# กำหนด URL ของ Lightning Network Daemon (LND)
-rpc_interface = LightningRpc("<LND_RPC_URL>")
-
-# ตัวอย่างฟังก์ชันสำหรับสร้าง Invoice
-def create_invoice(amount_msat):
-    invoice = rpc_interface.invoice(amount_msat, "description", "expiry")
-    return invoice
-
-# ตัวอย่างฟังก์ชันสำหรับชำระเงินผ่าน Invoice
-def pay_invoice(invoice):
-    result = rpc_interface.pay(invoice['bolt11'])
-    return result
-
-# ตัวอย่างการใช้งาน
-invoice = create_invoice(10000)
-print("Invoice created:", invoice)
-
-payment_result = pay_invoice(invoice['bolt11'])
-print("Payment result:", payment_result)
+# https://tea.xyz/what-is-this-file
+---
+version: 1.0.0
+codeOwners:
+  - '0x93D80A53F5a46d001496cd2cf99595f71AA02374'
+quorum: 1
